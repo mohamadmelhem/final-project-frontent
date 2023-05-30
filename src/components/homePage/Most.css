@@ -1,0 +1,62 @@
+.most{
+    padding: 100px 0px;
+    background-color: var(--second-color);
+}
+.most h1{
+    margin-bottom: 50px;
+}
+.most .carousel-container{
+max-height: 500px;
+margin:0px var(--side-padding) ;
+padding:50px 0px 0px;
+}
+.most .slide{
+    border: 1px solid var(--gray-color);
+    padding: 5px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 10px 20px;
+    transition: 0.3s; 
+}
+.most .slide .image{
+  overflow: hidden;  
+}
+.most .slide img{
+    width: 100%;
+    transition: 0.3s;
+}
+.most .slide:hover img{
+    transform: scale(1.2) rotate(1deg);
+}
+.most .most-content{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+height: 100%;
+}
+.most .most-content h3{
+    margin: 0px 0px 5px;
+}
+.most .location-item{
+    font-size: 14px;
+    color: var(--gray-color);
+}
+.most .most-content p{
+    margin-bottom: 30px;
+}
+.most .most-content .more-info{
+    background-color: var(--second-color);
+    padding: 10px ;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+}
+.most .most-content .more-info:hover{
+    transform: scale(1.2);
+    background-color: var(--main-color);
+}

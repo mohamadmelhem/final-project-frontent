@@ -1,0 +1,94 @@
+.bangalo-profile {
+    padding: 50px var(--side-padding);
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+  .bangalo-profile h3{
+  margin-bottom: 10px;
+  }
+  .bangalo-profile > div :first-of-type {
+    flex-basis: 50%;
+    text-align: start;
+  }
+  .bangalo-profile .image {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  .bangalo-profile .image img {
+    width: 100%;
+    height: 500px;
+  }
+  .bangalo-profile .content {
+    flex-basis: calc(50% - 30px);
+    text-align: start;
+  }
+  .bangalo-profile .content p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  .bangalo-profile .content h1 {
+    margin: 0;
+    text-transform: capitalize;
+    background-color: var(--second-color);
+    width: 100%;
+    padding: 5px;
+    text-align: start;
+    margin-bottom: 20px;
+  }
+  .bangalo-profile .content h2{
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  .bangalo-profile .bangalo-gallery{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+  
+  }
+  .bangalo-profile .bangalo-gallery img {
+    width: 19%;
+    height: 90px;
+    cursor: pointer;
+  flex-basis: 19%;
+  border: 2px solid transparent;
+  }
+  .bangalo-profile .bangalo-gallery img:hover {
+    border: 2px solid var(--main-color);
+  }
+  .bangalo-profile .sub-grid{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+  }
+  .bangalo-profile .contact-bangalo .links-social{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+  }
+  .bangalo-profile .contact-bangalo a{
+    text-decoration: none;
+  color: white;
+  padding:15px 10px;
+  border: white;
+  flex-basis: 100%;
+  text-align: center;
+  font-size: 18px;
+  background-color: var(--main-color);
+  transition: 0.3s;
+  }
+  .bangalo-profile .contact-bangalo .watsap:hover{
+  background-color: #4ec55b;
+  }
+  .bangalo-profile .contact-bangalo .facebook:hover{
+  background-color: #1773ea;
+  }
+  .bangalo-profile .contact-bangalo .insta:hover{
+    background:linear-gradient(#4d58ce,#cf2872,#f6d371);
+  }
+  .bangalo-profile .contact-bangalo a:hover{
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transform: scaleY(1.05); 
+  }
+  

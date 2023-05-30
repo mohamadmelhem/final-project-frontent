@@ -1,0 +1,56 @@
+.contact-body{
+padding: 100px var(--side-padding);
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-gap: 50px;
+}
+/* .contactus-form input{
+    width: 100%;
+    border: 1px solid black;
+} */
+
+.contactus-form .Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #e6d168 !important;
+    
+  }
+  
+  .contactus-form .MuiInputLabel-root {
+    color: black !important;
+  }
+  .contactus-form .MuiButton-root {
+    background-color: transparent;
+    position: relative;
+    border: 2px solid #e6d168 ;
+    color: black;
+  }
+  /* .contactus-form .MuiButton-root:hover{
+    color: white;
+  } */
+
+  .contactus-form .MuiButton-root::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #e6d168;
+    color: black;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .contactus-form .MuiButton-root:hover::before {
+    opacity: 1;
+    color: black;
+  }
+.contactus-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+.contact-img img{
+    width: 60%;
+    /* height: 900px; */
+}

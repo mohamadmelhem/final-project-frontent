@@ -1,0 +1,133 @@
+/* .sidebar-button {
+  position: absolute;
+  top: 0;
+  right: 10%;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 50%;
+  padding: 8px;
+  transition: 0.5s ease;
+}
+
+.MuiDrawer-paper {
+  width: 300px;
+}
+
+.MuiDrawer-paper.close {
+  width: 88px;
+}
+
+.MuiDrawer-paper.close .sidebar-button {
+  rotate: 180deg;
+}
+
+.sidebar-nav-text {
+  transition: 0.5s ease;
+}
+
+.MuiDrawer-paper.close .sidebar-nav-text {
+  opacity: 0;
+}
+
+.MuiDrawer-paper.close .sidebar-nav-icon {
+  margin-left: 15px;
+} */
+
+.sidebar {
+    box-sizing: border-box;
+    width: 300px;
+    height: 95vh;
+    padding: 20px 0;
+    margin-top: 20px;
+    margin-left: 20px;
+    background-color: #555;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    position: relative;
+    transition: 0.5s ease;
+  }
+  
+  .sidebar-close-btn {
+    position: absolute;
+    top: 10px;
+    right: -20px;
+    background-color: #111;
+    color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    transition: 0.5s ease;
+  }
+  
+  .sidebar.close {
+    width: 78px;
+  }
+  
+  .sidebar.close .sidebar-close-btn {
+    rotate: 180deg;
+  }
+  
+  .sidebar.close .sidebar-hide {
+    display: none;
+  }
+  
+  .sidebar-nav {
+    width: 100%;
+  }
+  
+  .sidebar-links {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .sidebar-links p {
+    color: inherit;
+  }
+  
+  .sidebar-links p:not(:last-child) {
+    margin-right: 10px;
+  }
+  
+  .sidebar-admin-profile {
+    background-color: rgba(255, 255, 255, 0.6);
+    color: #111;
+  }
+  
+  .sidebar-admin-profile p,
+  .sidebar-admin-profile span {
+    color: inherit;
+  }
+  
+  .sidebar-admin-profile span {
+    margin-left: auto;
+    scale: 1.2;
+  }
+  
+  .sidebar-admin-profile {
+    padding-right: 10px;
+  }
+  
+  .sidebar-logout {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .spacing {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-left: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 0 10px;
+    border-radius: 5px;
+  }
+  
+  .hover:hover {
+    background-color: #ffffff11;
+  }
+  

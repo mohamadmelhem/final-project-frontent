@@ -1,0 +1,57 @@
+.mySwiper {
+  height: calc(100vh - 80px);
+}
+.mySwiper img {
+  width: 100%;
+  height: 100%;
+}
+.mySwiper .relative {
+  position: relative;
+  z-index: 1;
+}
+.mySwiper .relative .content {
+  width: 100%;
+  height: 100%;
+  background:linear-gradient(50deg ,transparent 60%, rgba(230, 209, 104,0.7) 40%);
+  transform: translate();
+  top: 0;
+  right: 0;
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  animation: slidetoleft 0.8s ease-in-out;
+}
+.mySwiper .relative .content > div {
+  width: 40%;
+  margin-left: auto;
+}
+.mySwiper .relative .content h1 {
+  font-size: 50px;
+  margin-top: 150px;
+}
+.mySwiper .relative .content span {
+  font-size: 22px;
+  padding: 15px;
+  background-color: var(--main-color);
+  color: var(--second-color);
+  width: 180px;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.mySwiper .relative .content span:hover{
+    background-color: var(--main-color);
+    color:white;
+}
+@keyframes slidetoleft{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-0%);
+    }
+}

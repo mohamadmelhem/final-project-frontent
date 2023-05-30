@@ -1,0 +1,21 @@
+.about{
+    padding: 100px var(--side-padding);
+    background-color: var(--main-color);
+    color: white;
+}
+.about h1::before{
+    background-color: var(--second-color) !important;
+}
+.about h1::after{
+ border: var(--second-color);
+}
+.about > div{
+    line-height: 1.5;
+    font-size: 18px;
+}
+.about .about-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+    margin-top: 50px;
+}
