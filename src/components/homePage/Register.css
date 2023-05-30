@@ -34,3 +34,57 @@
     font-size: 18px;
     padding: 15px;
 }
+
+
+/* Media queries for tablet */
+@media (max-width: 760px) {
+    .home-register {
+      flex-direction: column;
+      height: auto;
+      align-items: center;
+    }
+  
+    .home-register .image {
+      width: 70%;
+    }
+  
+    .home-register .content {
+      width: 100%;
+    }
+  
+    .home-register .content h1 {
+      text-align: center;
+    }
+  }
+  
+  /* Media queries for phone */
+  @media (max-width: 480px) {
+    .home-register {
+      padding: 30px var(--side-padding);
+      height: auto;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+  
+    .home-register .image {
+      width: 100%;
+    }
+  
+    .home-register .content {
+      width: 100%;
+    }
+  
+    .home-register .content h1 {
+      text-align: center;
+      font-size: 24px;
+    }
+  
+    .home-register .content p {
+      font-size: 16px;
+    }
+  
+    .home-register .content button {
+      font-size: 16px;
+    }
+  }

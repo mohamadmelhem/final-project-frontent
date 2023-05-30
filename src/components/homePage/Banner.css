@@ -55,3 +55,38 @@
         transform: translateX(-0%);
     }
 }
+
+/* Media queries for tablet */
+@media (max-width: 1024px) {
+  .mySwiper .relative .content h1 {
+    font-size: 40px;
+    margin-top: 120px;
+  }
+  
+  .mySwiper .relative .content > div {
+    width: 50%;
+  }
+  
+  .mySwiper .relative .content span {
+    font-size: 20px;
+    width: 160px;
+  }
+}
+
+
+/* Media queries for phone */
+@media (max-width: 480px) {
+  .mySwiper .relative .content h1 {
+    font-size: 30px;
+    margin-top: 80px;
+  }
+
+  .mySwiper .relative .content > div {
+    width: 60%;
+  }
+
+  .mySwiper .relative .content span {
+    font-size: 18px;
+    width: 150px;
+  }
+}

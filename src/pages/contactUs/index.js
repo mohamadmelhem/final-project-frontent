@@ -5,7 +5,7 @@ export default function ContactUs() {
   return (
     <div className='contact-container'>
         <></>
-        {/* <ContactForm /> */}
+        <ContactForm />
     </div>
   );
 }
