@@ -8,7 +8,7 @@ const Card = (props) => {
     const navigate = useNavigate()
     return (<div className="main-card" >
         <div className="image">
-            <img src={`http://localhost:8000/${multImages[0]}`} alt="card" />
+            <img src={`https://hjezli-backend.onrender.com/${multImages[0]}`} alt="card" />
         </div>
         <div className="content">
             <h2>{data.description}</h2>
