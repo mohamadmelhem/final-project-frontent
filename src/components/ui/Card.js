@@ -8,7 +8,7 @@ const Card = (props) => {
 
     return (<div className="main-card" >
         <div className="image">
-            <img src={`http://localhost:8000/${multImages[0]}`} alt={data.name} />
+            <img src={`https://hjezli-backend.onrender.com/${multImages[0]}`} alt={data.name} />
         </div>
         <div className="content">
             <h2>{data.name}</h2>
