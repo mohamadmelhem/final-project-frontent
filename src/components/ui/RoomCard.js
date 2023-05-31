@@ -1,17 +1,19 @@
 import "./Card.css"
 import { useNavigate } from "react-router-dom";
-const RoomCard = () => {
+const RoomCard = (props) => {
     const navigate = useNavigate()
-    return (<div className="main-card" key={12}>
+    const data = props.data
+    const multImages = data.images.split(",")
+    return (<div className="main-card">
         <div className="image">
-            <img src="https://www.lebanontraveler.com/wp-content/uploads/2018/01/joy-of-the-great-outdoors-2_055021.jpg" alt="card" />
+            <img src={`https://hjezli-backend.onrender.com/${multImages[0]}`} alt={props.data._id} />
         </div>
         <div className="content">
-            <h2>koura camping</h2>
-            <h4>starting 80$ / day</h4>
-            <p className="light-text">The hotel encapsulates the warmth of Georgian hospitality in an industrially developed area that is in close proximity with most popular tourist attractions.</p>
-            <h4>camping location for 2 to 4 people</h4>
-            <span className="card-button" onClick={() => { navigate(`/bangalo/${12}`) }}>Learn More</span>
+            <h2>{props.data.description}</h2>
+            <h4>starting {props.data.pricePerNight} / day</h4>
+            <p className="light-text">{props.data.description}</p>
+            <h4>camping location for {props.data.space} people</h4>
+            <span className="card-button" onClick={() => { navigate(`/bangalo/${props.data._id}`) }}>Learn More</span>
         </div>
     </div>)
 }
