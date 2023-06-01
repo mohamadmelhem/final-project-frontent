@@ -15,7 +15,7 @@ const Navbar = () =>{
             </NavLink>
         </li>
         <li><NavLink to="/tourist" exact activeClassName="active">
-        tourist Resort
+         Resort
             </NavLink></li>
         <li><NavLink to="/contact" exact activeClassName="active">
             Contact Us
