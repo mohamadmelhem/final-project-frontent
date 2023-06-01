@@ -3,12 +3,13 @@ import ReactStars from "react-rating-stars-component";
 import { useNavigate } from "react-router-dom";
 const Card = (props) => {
     const data = props.data
-    const multImages = data.images.split(",")
     const navigate = useNavigate();
 
     return (<div className="main-card" >
         <div className="image">
-            <img src={`https://hjezli-backend.onrender.com/${multImages[0]}`} alt={data.name} />
+            {data.images.map((img)=> (
+                <img src={img} alt={data.name} />
+            ))}
         </div>
         <div className="content">
             <h2>{data.name}</h2>
