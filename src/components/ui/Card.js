@@ -7,9 +7,7 @@ const Card = (props) => {
 
     return (<div className="main-card" >
         <div className="image">
-            {data.images.map((img)=> (
-                <img src={img} alt={data.name} />
-            ))}
+            <img src={data.images[0]} alt={data.name}/>
         </div>
         <div className="content">
             <h2>{data.name}</h2>
