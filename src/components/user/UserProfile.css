@@ -46,3 +46,10 @@ background-color: var(--main-color);
 color: var(--second-color);
 cursor: pointer;
 }
+
+@media (max-width: 992px) {
+  
+    .user-main-body{
+        grid-template-columns: 1fr ;
+    }
+}
