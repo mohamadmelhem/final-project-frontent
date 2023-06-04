@@ -31,4 +31,10 @@
       grid-template-columns: 1fr 1fr  ;
   }
   } 
+  @media (max-width: 576px) {
+  
+    .user-content .user-dahsboard-gallery{
+      grid-template-columns: 1fr   ;
+  }
+  } 
   
