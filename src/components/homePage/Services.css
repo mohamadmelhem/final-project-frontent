@@ -1,70 +1,60 @@
-.services{
-    padding: 50px var(--side-padding);
-    /* background-color: var(--main-color); */
-    color: var(--main-color);
+.services {
+  padding: 50px var(--side-padding);
+  /* background-color: var(--main-color); */
+  color: var(--main-color);
 }
-.services h1{
-    margin: 50px auto;
+.services h1 {
+  margin: 50px auto;
 }
-.services h1::before{
-    background-color: var(--second-color) !important;
+.services h1::before {
+  background-color: var(--second-color) !important;
 }
-.services .grid{
- display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 50px;   
-    padding: 50px 0px;
+.services .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 50px;
+  padding: 50px 0px;
 }
-.services .grid .service{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: center;
+.services .grid .service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
 }
-.services .grid .service .image{
-    transition: 0.3s;
-    background-color: var(--second-color);
-    padding: 40px;
-    border-radius: 20px;
-    margin-bottom: 20px;
+.services .grid .service .image {
+  transition: 0.3s;
+  background-color: var(--second-color);
+  padding: 40px;
+  border-radius: 20px;
+  margin-bottom: 20px;
 }
-.services .grid  .service .image:hover{
-    background-color: var(--second-color);
-    color: var(--main-color);
+.services .grid .service .image:hover {
+  background-color: var(--second-color);
+  color: var(--main-color);
 }
-.services .grid .service span{
-    font-size: 36px;
-    font-weight: bold;
+.services .grid .service span {
+  font-size: 36px;
+  font-weight: bold;
 }
-.services .grid .service p{
-    font-size: 16px;
+.services .grid .service p {
+  font-size: 16px;
 }
-
 
 /* Media queries for tablet */
-@media (max-width: 760px) {
-    .services .grid {
-      grid-template-columns: 1fr 1fr;
-    }
+@media (max-width: 768px) {
+  .services .grid {
+    grid-template-columns: 1fr 1fr; 
+       grid-gap: 20px;
+    padding: 30px 0px;
   }
-  
-  /* Media queries for phone */
-  @media (max-width: 480px) {
-    .services .grid {
-      grid-template-columns: 1fr;
-    }
-  
-    .services h1 {
-      font-size: 28px;
-      margin: 30px auto;
-    }
-  
-    .services .grid .service span {
-      font-size: 24px;
-    }
-  
-    .services .grid .service p {
-      font-size: 14px;
-    }
+  .services .grid .service .image {
+    padding: 20px;
   }
+  .services .grid .service span {
+    font-size: 22px;
+  }
+  .services .grid .service p {
+    font-size: 16px;
+  }
+}

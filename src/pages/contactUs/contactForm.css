@@ -54,3 +54,8 @@ grid-gap: 50px;
     width: 60%;
     /* height: 900px; */
 }
+@media (max-width: 992px) {
+  .contact-body{
+    grid-template-columns:  1fr;
+    }
+}

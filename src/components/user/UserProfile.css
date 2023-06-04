@@ -1,0 +1,48 @@
+.user-main-body{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 50px;
+    padding: 50px var(--side-padding);
+}
+.user-profile > div{
+        background-color: var(--second-color); 
+       display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+}
+.user-profile .icon{
+    border: 3px solid var(--main-color);
+padding:15px 20px;
+border-radius: 50%;
+}
+.user-profile .top-div{
+margin-bottom: 20px;
+}
+.user-profile .top-div p{
+    font-size: 18px;
+    margin:0 0 10px;
+}
+.user-profile .bottom-div{
+    font-size: 18px;
+    margin:0 0 10px;
+    text-align: start;
+}
+.user-profile .bottom-div h2{
+    margin: 0;
+    margin-bottom: 20px;
+}
+.user-profile .bottom-div h4{
+    margin: 0 0 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.user-profile .bottom-div button{
+  border: none;
+  padding: 10px;
+background-color: var(--main-color);
+color: var(--second-color);
+cursor: pointer;
+}

@@ -24,7 +24,7 @@
 .fa-android{
 	font-size:3em;
 }
-@media screen and (max-width: 640px) {
+/* @media screen and (max-width: 640px) {
 	.main-content{width: 90%;}
 	.company__info{
 		display: none;
@@ -36,7 +36,7 @@
 }
 @media screen and (min-width: 642px) and (max-width:800px){
 	.main-content{width: 70%;}
-}
+} */
 .row > h2{
 	color:black;
 }
@@ -97,3 +97,27 @@ form{
 .container-fluid {
 	margin-top: 8rem;
 }
+@media (max-width: 768px) {
+	.main-content{
+		grid-template-columns: 1fr ;
+		
+	}
+	.form__input{
+		width: 90%;
+	}
+	.container-fluid{
+		margin-top: 50px;
+	}
+	.company__info{
+		border-top-left-radius: 20px;
+		border-top-right-radius: 20px;
+		border-bottom-left-radius:initial;
+	}
+	.main-content{
+		margin: 5opx auto; 
+		width: 90%;
+	}
+	.login_form{
+		border-top-right-radius:0px;
+	}
+  }

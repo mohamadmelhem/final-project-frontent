@@ -8,16 +8,16 @@ import "./Most.css"
 const Most = () => {
     const responsive = {
         desktop: {
-            breakpoint: { max: 3000, min: 1024 },
+            breakpoint: { max: 3000, min: 992 },
             items: 4,
         },
         tablet: {
-            breakpoint: { max: 1024, min: 464 },
-            items: 3,
+            breakpoint: { max: 992, min: 576 },
+            items: 2,
         },
         mobile: {
-            breakpoint: { max: 464, min: 0 },
-            items: 2,
+            breakpoint: { max: 576, min: 0 },
+            items: 1,
         }
     }
     return (<div className="most">

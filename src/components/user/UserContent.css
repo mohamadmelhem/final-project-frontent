@@ -1,0 +1,25 @@
+/* .user-content {
+} */
+.user-content h1 {
+  background-color: var(--second-color);
+  padding: 10px;
+  text-align: start;
+  margin-top: 0;
+}
+.user-content .add-post {
+  text-align: end;
+  margin-bottom: 20px;
+}
+.user-content .add-post button {
+  background-color: var(--main-color);
+  padding: 15px 20px;
+  color: var(--second-color);
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+.user-content .user-dahsboard-gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+}

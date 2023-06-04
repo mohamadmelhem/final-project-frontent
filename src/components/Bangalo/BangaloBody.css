@@ -41,10 +41,10 @@
     margin-bottom: 10px;
   }
   .bangalo-profile .bangalo-gallery{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-  
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 5px;
   }
   .bangalo-profile .bangalo-gallery img {
     width: 19%;
@@ -92,3 +92,25 @@
   transform: scaleY(1.05); 
   }
   
+  @media (max-width: 1200px) {
+    .bangalo-profile  {  
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  
+  @media (max-width: 576px) {
+  
+    .bangalo-profile .image img {
+      height: initial;
+      max-height: 400px;
+    }
+    .bangalo-profile .bangalo-gallery img  {
+      width: 24%;
+      height: 60px;
+    flex-basis: 24%;
+    }
+    .bangalo-profile .sub-grid{
+      grid-template-columns: 1fr;
+    }
+  }

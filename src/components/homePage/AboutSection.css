@@ -21,28 +21,24 @@
 }
 
 /* Media queries for tablet */
-@media (max-width: 760px) {
+@media (max-width: 768px) {
     .about {
       padding: 80px var(--side-padding);
     }
-  
     .about .about-grid {
       grid-template-columns: 1fr;
     }
   }
   
   /* Media queries for phone */
-  @media (max-width: 480px) {
+  @media (max-width: 576px) {
     .about {
-      padding: 60px var(--side-padding);
+      padding: 50px var(--side-padding);
     }
-  
     .about > div {
       font-size: 16px;
     }
-  
     .about .about-grid {
-      grid-template-columns: 1fr;
       grid-gap: 30px;
       margin-top: 30px;
     }

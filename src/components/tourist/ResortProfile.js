@@ -4,9 +4,8 @@ import { useState } from "react";
 import ContentResort from "./ContentResort";
 
 const ResortProfile = (props) => {
-    // const multImages = props.data.images.split(",");
     const images = props.data.images;
-    console.log(images);
+    console.log(images)
     const [active, setActive] = useState(`${images[0]}`)
     return (<div className="resort-profile">
         <div>
@@ -19,7 +18,6 @@ const ResortProfile = (props) => {
                 ))}
             </div>
         </div>
-
         <ContentResort data={props.data} />
     </div>)
 }

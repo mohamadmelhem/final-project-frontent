@@ -1,3 +1,6 @@
+.navbar-mobile {
+  display: none;
+}
 .navbar {
   height: 80px;
   background-color: var(--main-color);
@@ -36,46 +39,91 @@
   align-items: center;
   text-align: center;
   font-size: 18px;
-  
 }
-.navbar .navbar-login a{
+.navbar .navbar-login a {
   color: var(--second-color);
   text-decoration: none;
 }
 .navbar .navbar-login a:hover {
   color: #555;
-  background-color:var(--second-color) ;
+  background-color: var(--second-color);
   transition: 0.6s;
   /* text-decoration: underline; */
 }
-
-@media (max-width: 760px) {
-  .navbar {
-    padding: 10px 20px;
-  }
-
+@media (max-width: 992px) {
   .navbar .navbar-list ul {
     gap: 30px;
     font-size: 16px;
   }
 }
-
-/* Media queries for phone */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .navbar {
-    height: auto;
+    display: none;
+  }
+  .navbar-mobile {
+    position: relative;
+    height: 80px;
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px var(--side-padding);
+    text-align: center;
+  }
+  .navbar-mobile .icon-parent,
+  .navbar-mobile .navbar-logo {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    justify-content: center;
   }
-
-  .navbar-logo img {
-    margin-bottom: 20px;
+  .navbar-mobile .icon {
+    position: relative;
+    color: var(--second-color);
+    display: block;
+    cursor: pointer;
   }
-
-  .navbar .navbar-list ul {
-    flex-direction: column;
-    gap: 20px;
+  .navbar-mobile .navbar-logo img {
+    width: 150px;
+    height: auto;
+  }
+  .navbar-mobile .navbar-list {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 70%;
+    height: calc(100vh - 80px);
+    background-color: var(--second-color);
+    padding: 50px 20px;
     text-align: center;
+    transition: 1s;
+    z-index: 100;
+  }
+  .navbar-mobile .open{
+    transform: translateX(0);
+  }
+  .navbar-mobile .close{
+    transform: translateX(-101%);
+  }
+  .navbar-mobile .navbar-list ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    list-style-type: none;
+    margin: 0;
+    font-size: 18px;
+  }
+
+  .navbar-mobile .navbar-list ul li a {
+    text-decoration: none;
+    color: var(--main-color);
+  }
+  .navbar-mobile .navbar-list a:hover {
+    color: #555;
+    background-color: var(--second-color);
+    transition: 0.6s;
+    /* text-decoration: underline; */
   }
 }

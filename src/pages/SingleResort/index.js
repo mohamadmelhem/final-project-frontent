@@ -21,7 +21,6 @@ function TouristResort() {
       axios.get(`https://hjezli-backend.onrender.com/houses/idTouristResort/${params.id}`)
       .then(response => {
           setBangalos(response.data.data);
-          console.log("testingggg",response.data.data);
       })
       .catch(error => {
         console.log(error);
@@ -30,7 +29,7 @@ function TouristResort() {
     return (
         <>
             {data ? <ResortProfile data={data}/> : <p>loading...</p>}
-            {data ? <BangaloGallery data={bangalos}/> : <p>loading...</p>}
+            {bangalos ? <BangaloGallery data={bangalos}/> : <p>loading...</p>}
         </>
     );
 }
