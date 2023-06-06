@@ -1,5 +1,6 @@
 import "./Register.css"
 import register from "../../assets/register.svg"
+import { Link } from 'react-router-dom';
 const Register = () => {
     return (
     <div className="home-register">
@@ -11,7 +12,10 @@ const Register = () => {
             <p>you can add the rooms and resorts that you own on our application.<br/>
 create your account on our app to the latest offers.
             </p>
-            <button>Register now</button>
+            
+<button>
+  <Link to="/register">Register now</Link>
+</button>
         </div>
     </div>
     )

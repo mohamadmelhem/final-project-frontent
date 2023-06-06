@@ -7,9 +7,10 @@ import Switch from '@mui/material/Switch';
 import Button from '@mui/material/Button';
 
 const EditResortPop=(props)=>{
+  
+  
     return(
              <div className="add-resortpop">
-
         <Popup close={props.handleClose}>
             <h2>Edit Resort </h2>
             <Box
@@ -38,7 +39,7 @@ const EditResortPop=(props)=>{
                 multiple
             /><br />
             <Button variant="contained" disableElevation>
-                Add Resort
+                Edit Resort
             </Button>
 
         </Box>

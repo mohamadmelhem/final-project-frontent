@@ -33,7 +33,16 @@
     color: white;
     font-size: 18px;
     padding: 15px;
+    cursor: pointer;
 }
+.home-register .content button a{
+text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 15px;
+  cursor: pointer;
+}
+
 
 
 /* Media queries for tablet */

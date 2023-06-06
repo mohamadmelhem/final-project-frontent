@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import "./UserContent.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faTable } from '@fortawesome/free-solid-svg-icons'
 import UserResortCard from "../ui/UserResortCard";
 function UserContent(props) {
-    const [data, setData] = useState([]);
     return (
         <div className="user-content">
             <h1> <FontAwesomeIcon className="icon" icon={faTable} size="" /> My Dashboard</h1>
@@ -12,11 +11,9 @@ function UserContent(props) {
                 <button onClick={props.handleOpen}><FontAwesomeIcon className="icon" icon={faPlus}/> Add Resort</button>
             </div>
             <div className="user-dahsboard-gallery">
-                <UserResortCard open={props.handleEditOpen} />
-                <UserResortCard open={props.handleEditOpen} />
-                <UserResortCard open={props.handleEditOpen} />
-                <UserResortCard open={props.handleEditOpen} />
-                <UserResortCard open={props.handleEditOpen} />
+                {props.data && props.data.map((resort)=>(
+                  <UserResortCard open={props.handleEditOpen} data={resort} key={resort._id}/>  
+                ))}
             </div>
         </div>
     );

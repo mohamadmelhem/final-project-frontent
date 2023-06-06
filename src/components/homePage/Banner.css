@@ -29,7 +29,7 @@
 }
 .mySwiper .relative .content h1 {
   font-size: 50px;
-  margin-top: 150px;
+  margin-top: 130px;
 }
 .mySwiper .relative .content span {
   font-size: 22px;
@@ -54,7 +54,19 @@
         transform: translateX(-0%);
     }
 }
-
+@media (max-width: 1200px) {
+  .mySwiper .relative .content h1 {
+    font-size: 40px;
+    margin-top: 70px;
+  }
+  .mySwiper .relative .content h2{
+    font-size: 18px;
+  }
+  .mySwiper .relative .content span {
+    font-size: 18px;
+    width: 160px;
+  }
+}
 /* Media queries for tablet */
 @media (max-width: 992px) {
   .mySwiper .relative .content h1 {

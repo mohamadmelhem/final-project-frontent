@@ -1,15 +1,28 @@
 import "./UserProfile.css"
+import {useEffect,useState} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
-const UserProfile = (props) => {
+import axios from "axios";
+
+const UserProfile = () => {
+const [dataUser,setDataUser]=useState({})
+    useEffect(() => {
+        axios.get(`https://hjezli-backend.onrender.com/user/${localStorage.getItem('userId')}`)
+          .then(response => {
+              setDataUser(response.data.data[0]);
+          })
+          .catch(error => {
+            console.log(error);
+          });
+      },[]);
     return (
         <div className="user-profile">
-            <div className="top-div">
+           {dataUser && <div className="top-div">
                 <div > <FontAwesomeIcon className="icon" icon={faUser} size="3x" /></div>
-                <h1>Mohamad</h1>
-                <p>maher.ri@live.com</p>
-                <p>+961 76 511 394</p>
-            </div>
+                <h1>{dataUser.firstName} {dataUser.lastName}</h1>
+                <p>{dataUser.email}</p>
+                <p>{dataUser.phone}</p>
+            </div>}
         </div>
     )
 }

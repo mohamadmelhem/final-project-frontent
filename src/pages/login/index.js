@@ -1,8 +1,41 @@
-import React from 'react';
-import './index.css'; // Import any necessary CSS file
-import Logo from '../../assets/logo.png'
-
+import React, { useState, useContext } from "react";
+import './index.css';
+import Logo from '../../assets/logo.png';
+import axios from "axios";
+import AuthContext from "../../store/AuthContext";
+import { useNavigate } from "react-router-dom";
 const LoginPage = () => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const authCtx = useContext(AuthContext);
+  const navigate = useNavigate()
+
+  const handleUsernameChange = (event) => {
+    setUsername(event.target.value);
+  };
+
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+    axios.post('https://hjezli-backend.onrender.com/user/login', {
+      userName: username,
+      password: password
+    })
+      .then(response => {
+        authCtx.login(response.data.data, response.data.id);
+        navigate('/user')
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  };
+
+
+
+
   return (
     <div className="container-fluid">
       <div className="row main-content bg-success text-center">
@@ -19,49 +52,48 @@ const LoginPage = () => {
             <div className="row">
               <h2>Log In</h2>
             </div>
-            <div className="row">
-              <form className="form-group">
-                <div className="row">
-                  <input
-                    type="text"
-                    name="username"
-                    id="username"
-                    className="form__input"
-                    placeholder="Username"
-                  />
-                </div>
-                <div className="row">
-                  <input
-                    type="password"
-                    name="password"
-                    id="password"
-                    className="form__input"
-                    placeholder="Password"
-                  />
-                </div>
-                <div className="row">
-                  <input
-                    type="checkbox"
-                    name="remember_me"
-                    id="remember_me"
-                    className=""
-                  />
-                  <label htmlFor="remember_me">Remember Me!</label>
-                </div>
-                <div className="row">
-                  <input type="submit" value="Submit" className="btn" />
-                </div>
-              </form>
-            </div>
-            <div className="row">
+      <div className="row">
+        
+        <form className="form-group">
+          <div className="row">
+            <input
+              type="text"
+              name="username"
+              id="username"
+              className="form__input"
+              placeholder="Username"
+              value={username}
+              onChange={handleUsernameChange}
+            />
+          </div>
+          <div className="row">
+            <input
+              type="password"
+              name="password"
+              id="password"
+              className="form__input"
+              placeholder="Password"
+              value={password}
+              onChange={handlePasswordChange}
+            />
+          </div>
+
+          <div className="row">
+            <input type="submit" value="Submit" className="btn" onClick={submitHandler} />
+          </div>
+          <div className="row">
               <p>
-                Don't have an account? <a href="#">Register Here</a>
+                Don't have an account? <a href="/register">Register Here</a>
               </p>
             </div>
-          </div>
+        </form>
+      </div>
+      {/* Rest of the JSX code */}
+    </div>
+    </div>
         </div>
       </div>
-    </div>
+   
   );
 };
 

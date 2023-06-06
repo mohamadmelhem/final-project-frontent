@@ -5,7 +5,6 @@ import ContentResort from "./ContentResort";
 
 const ResortProfile = (props) => {
     const images = props.data.images;
-    console.log(images)
     const [active, setActive] = useState(`${images[0]}`)
     return (<div className="resort-profile">
         <div>

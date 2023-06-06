@@ -1,4 +1,4 @@
-.add-resortpop h2{
+.add-resortpop  h2{
    margin-top: 0px;
 }
 
@@ -24,10 +24,14 @@
     left: 0;
     width: 100%;
     height: 100%;
-   
-    color: black;
+    
+
     opacity: 0;
     transition: opacity 0.3s ease;
+  }
+  .add-resortpop .MuiButton-root:hover{
+    background-color: #555;
+    color: var(--second-color);
   }
 
   .add-resortpop .MuiButton-root:hover::before {

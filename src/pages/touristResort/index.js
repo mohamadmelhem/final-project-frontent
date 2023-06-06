@@ -2,6 +2,7 @@
 import Cover from '../../components/tourist/Cover';
 import Body from '../../components/tourist/Body';
 import React, { useState, useEffect } from "react";
+import Spiner from "../../components/ui/Spiner"
 import axios from "axios";
 
 function TouristResort() {
@@ -12,7 +13,6 @@ function TouristResort() {
     axios.get('https://hjezli-backend.onrender.com/touristResort')
       .then(response => {
           setData(response.data.data);
-        console.log(response.data.data);
         setIsLoading(false)
       })
       .catch(error => {
@@ -22,7 +22,7 @@ function TouristResort() {
     return (
       <>
       <Cover/>
-      {isLoading ? <p>Loading data...</p> : (<Body data={data}/>)}
+      {isLoading ? <Spiner/> : (<Body data={data}/>)}
       </>
     );
   }

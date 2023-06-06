@@ -1,0 +1,40 @@
+.edit-bangalouser  h2{
+    margin-top: 0px;
+ }
+ 
+ .edit-bangalouser .Mui-focused .MuiOutlinedInput-notchedOutline {
+     border-color: var(--second-color) !important;
+     
+   }
+   
+   .edit-bangalouser .MuiInputLabel-root {
+     color: black !important;
+   }
+   .edit-bangalouser .MuiButton-root {
+     background-color: transparent;
+     position: relative;
+     border: 2px solid var(--second-color) ;
+     color: black;
+     background-color: #e6d168;
+   }
+   .edit-bangalouser .MuiButton-root::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+    
+     color: black;
+     opacity: 0;
+     transition: opacity 0.3s ease;
+   }
+   .edit-bangalouser .MuiButton-root:hover{
+    background-color: #555;
+    color: var(--second-color);
+  }
+ 
+   .edit-bangalouser .MuiButton-root:hover::before {
+     opacity: 1;
+     color: black;
+   }

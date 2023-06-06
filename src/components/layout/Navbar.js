@@ -1,11 +1,13 @@
 import "./Navbar.css"
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faBurger, faPlus, faTable } from '@fortawesome/free-solid-svg-icons'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 import logo from "../../assets/logo.png"
-import { useState } from "react";
+import { useState, useContext } from "react";
+import AuthContext from "../../store/AuthContext";
 const Navbar = () => {
-    const [open,setOpen]=useState(false)
+    const authCtx = useContext(AuthContext);
+    const [open, setOpen] = useState(false)
     return (<>
         <div className="navbar">
             <div className="navbar-logo">
@@ -14,22 +16,25 @@ const Navbar = () => {
             <div className="navbar-list">
                 <ul>
                     <li>
-                        <NavLink to="/" exact activeClassName="active">
+                        <NavLink to="/">
                             Home
                         </NavLink>
                     </li>
-                    <li><NavLink to="/tourist" exact activeClassName="active">
-                        Resort
+                    <li><NavLink to="/tourist">
+                        Resorts
                     </NavLink></li>
-                    <li><NavLink to="/contact" exact activeClassName="active">
+                    <li><NavLink to="/contact">
                         Contact Us
                     </NavLink></li>
                 </ul>
             </div>
             <div className="navbar-login">
-                <NavLink to="/login" exact activeClassName="active">
+                {authCtx.isLoggedIn ? <NavLink to="/login" onClick={authCtx.logout}>
+                    Logout
+                </NavLink> : <NavLink to="/login">
                     Login
-                </NavLink>
+                </NavLink>}
+
 
             </div>
         </div>
@@ -38,24 +43,24 @@ const Navbar = () => {
                 <img src={logo} alt="hjezli" />
             </div>
             <div
-            className="icon-parent"><FontAwesomeIcon className="icon" icon={faBars} size="2x" onClick={()=>{setOpen(!open)}}/></div>
-            
-            <div className={open? 'navbar-list open':'navbar-list close'}>
+                className="icon-parent"><FontAwesomeIcon className="icon" icon={faBars} size="2x" onClick={() => { setOpen(!open) }} /></div>
+
+            <div className={open ? 'navbar-list open' : 'navbar-list close'}>
                 <ul>
                     <li>
-                        <NavLink to="/" exact activeClassName="active">
+                        <NavLink to="/">
                             Home
                         </NavLink>
                     </li>
-                    <li><NavLink to="/tourist" exact activeClassName="active">
+                    <li><NavLink to="/tourist">
                         Resort
                     </NavLink></li>
-                    <li><NavLink to="/contact" exact activeClassName="active">
+                    <li><NavLink to="/contact">
                         Contact Us
                     </NavLink>
                     </li>
 
-                    <li> <NavLink to="/login" exact activeClassName="active">
+                    <li> <NavLink to="/login">
                         Login
                     </NavLink></li>
                 </ul>

@@ -4,45 +4,42 @@ import axios from "axios";
 import "../../components/user/UserProfile.css"
 import UserProfile from "../../components/user/UserProfile";
 import UserContent from "../../components/user/UserContent";
-import EditPop from "../../components/user/EditPop";
 import EditResortPop from "../../components/user/EditResortPop";
 import AddResortPop from "../../components/user/AddResortPop";
 function User() {
-  // const [data, setData] = useState([]);
+  const [data, setData] = useState([]);
   // const [isLoading,setIsLoading]=useState(false)
   const [AdResortPop, setAdResortPop] = useState(false);
   const [editResortPop, setEditResortPop] = useState(false);
+  const [isLoading, setIsLoading] = useState(false)
 
-  const openResortHandler=()=>{
+  const openResortHandler = () => {
     setEditResortPop(true);
   }
-  const closeResortHandler=()=>{
+  const closeResortHandler = () => {
     // setEditResortPop(false)
   }
-  const openAddHandler=()=>{
+  const openAddHandler = () => {
     setAdResortPop(true);
   }
-  const closeAddHandler=()=>{
+  const closeAddHandler = () => {
     // setAdResortPop(false)
   }
-  //   useEffect(() => {
-  //     setIsLoading(true)
-  //     axios.get('https://hjezli-backend.onrender.com/touristResort')
-  //       .then(response => {
-  //           setData(response.data.data);
-  //         console.log(response.data.data);
-  //         setIsLoading(false)
-  //       })
-  //       .catch(error => {
-  //         console.log(error);
-  //       });
-  //   },[]);
+  useEffect(() => {
+    axios.get(`https://hjezli-backend.onrender.com/touristResort/idUser/${localStorage.getItem('userId')}`)
+      .then(response => {
+        setData(response.data.data);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }, []);
   return (
     <div className="user-main-body">
       <UserProfile />
-      <UserContent handleOpen={openAddHandler} handleEditOpen={openResortHandler}/>
-      {editResortPop && <EditResortPop  handleClose={closeResortHandler}/>}
-     {AdResortPop && <AddResortPop  handleClose={closeAddHandler}/>}
+      {data && <UserContent handleOpen={openAddHandler} handleEditOpen={openResortHandler} data={data}/>}
+      {editResortPop && <EditResortPop handleClose={closeResortHandler} />}
+      {AdResortPop && <AddResortPop handleClose={closeAddHandler} />}
     </div>
   );
 }

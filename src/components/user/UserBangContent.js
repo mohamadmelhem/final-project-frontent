@@ -12,10 +12,9 @@ function UserContent(props) {
                 <button onClick={props.handleOpenAdd}><FontAwesomeIcon className="icon" icon={faPlus} size="" /> Add Bangalo</button>
             </div>
             <div className="user-dahsboard-gallery">
-                <UserCard open={props.handleOpenEdit} />
-                <UserCard open={props.handleOpenEdit} />
-                <UserCard open={props.handleOpenEdit} />
-                <UserCard open={props.handleOpenEdit} />
+            {props.data && props.data.map((resort) => (
+        <UserCard data={resort} key={resort.id} open={props.handleOpenEdit}  />
+        ))}
             </div>
         </div>
     );
